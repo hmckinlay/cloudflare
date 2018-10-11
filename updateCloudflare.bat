@@ -1,6 +1,6 @@
 @echo off
 REM Script to update DNS with cloudflare
-REM Version 1.0
+REM Version 1.1
 REM Requires CURL for windows exe and dll https://curl.haxx.se/download.html
 REM Tested with CURL version 7.61.1
 REM Sets the date in form YYYYMMDD
