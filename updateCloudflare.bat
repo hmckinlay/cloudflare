@@ -13,13 +13,15 @@ REM Cloudflare API key (under my Profile) eg 94ac73425e00ee566662c159ab1c0067
 SET APIKEY="X-Auth-Key:INPUTAPIKEYHERE"
 REM Domain eg domain.com
 SET DOMAIN=INPUTDOMAINHERE
+REM DNS record you want to update eg mail.domain.com
+SET DNSRECORD=INPUTDNSRECORDHERE
 REM DNS zone ID eg 94ac73425e00ee566662c159ab1c0067, retrieve using 
 REM curl -X GET "https://api.cloudflare.com/client/v4/zones?name=%DOMAIN%" -H %EMAIL% -H %APIKEY% -H "Content-Type:application/json" 
 SET ZONEID=INPUTZONEIDHERE
-REM DNS record ID, eg 94ac73425e00ee566662c159ab1c0067
+REM DNS record ID, eg 94ac73425e00ee566662c159ab1c0067, retrieve using 
+REM curl -X GET "https://api.cloudflare.com/client/v4/zones/%ZONEID%/dns_records?name=%DNSRECORD%" -H %EMAIL% -H %APIKEY% -H "Content-Type:application/json" 
 SET DNSRECORDID=INPUTDNSRECORDIDHERE
-REM DNS record eg mail.domain.com
-SET DNSRECORD=INPUTDNSRECORDHERE
+
 REM **********END USER INPUTS**************
 
 REM Sets the public ip address or if no public IP logs error and jumps to the end
